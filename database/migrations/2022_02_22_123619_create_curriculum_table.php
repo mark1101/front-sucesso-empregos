@@ -37,8 +37,8 @@ return new class extends Migration
             $table->string('hiring_type');
             $table->string('desired_function');
             $table->string('schooling');
-            $table->string('educational_institution');
             $table->string('formation');
+            $table->string('educational_institution');
             $table->bigInteger('occupied_jobs_id')->unsigned();
             $table->foreignId('occupied_jobs_id')->references('id')->on('occupied_jobs');
             $table->bigInteger('courses_id')->unsigned();
