@@ -13,20 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-
-
 Route::get('/', function () {
-    return view('home');
+    return ['Laravel' => app()->version()];
 });
 
-Route::get('/login-user', function (){
-    return view('Applicant/login-applicant');
-});
-
-Route::get('/login-company', function (){
-    return view('Company/login-company');
-});
-
-Route::get('/sugestao', function (){
-    return view('Suggestion/suggestion');
-});
+require __DIR__.'/auth.php';
