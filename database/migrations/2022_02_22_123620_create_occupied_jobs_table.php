@@ -18,8 +18,8 @@ return new class extends Migration
             $table->bigInteger('user_jobs_id')->unsigned();
             $table->foreign('user_jobs_id')->references('id')->on('curriculum');
             $table->string('occupied_job');
-            $table->float('experience_time');
             $table->string('company_segment');
+            $table->float('experience_time');
             $table->timestamps();
         });
     }
